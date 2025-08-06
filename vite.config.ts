@@ -8,10 +8,7 @@ export default defineConfig({
 		tailwindcss(),
 		sveltekit(),
 		mdsvex({
-			extensions: ['.md', '.svx'],
-			layout: {
-				_: './src/lib/components/DefaultLayout.svelte'
-			}
+			extensions: ['.md', '.svx']
 		})
 	]
 });
