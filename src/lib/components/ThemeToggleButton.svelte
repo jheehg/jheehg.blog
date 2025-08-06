@@ -20,17 +20,18 @@
 </script>
 
 <button id="theme-toggle-button" onclick={changeTheme} aria-label="Toggle theme button">
-	<i id="themeIcon" class="fa-solid {themeType === 'dark' ? 'fa-toggle-off' : 'fa-toggle-on'} fa-xl"
+	<i
+		id="themeIcon"
+		class={`fa-solid ${themeType === 'dark' ? 'fa-toggle-off' : 'fa-toggle-on'} fa-xl`}
 	></i>
 </button>
 
 <style>
 	button#theme-toggle-button {
 		position: absolute;
-		right: 30px;
-		z-index: 1000;
-		all: unset;
+		right: 10px;
 		cursor: pointer;
+		z-index: 1000;
 	}
 
 	button:focus-visible {

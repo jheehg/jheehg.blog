@@ -1,12 +1,12 @@
 <script>
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import { navigationLinks } from '$lib/constants/navigation';
 
-	$: currentPath = $page.url.pathname;
+	const currentPath = $derived(page.url.pathname);
 </script>
 
-<header role="banner">
-	<nav role="navigation">
+<header>
+	<nav>
 		<ul>
 			{#each navigationLinks as item}
 				<li>
