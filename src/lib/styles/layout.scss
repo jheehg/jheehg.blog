@@ -19,6 +19,7 @@ body {
 	color: rgb(22, 23, 26);
 	background-color: var(--bg-color);
 	color: var(--text-color);
+	width: 100%;
 }
 
 ::selection {
@@ -40,31 +41,7 @@ pre {
 	overflow-x: auto;
 }
 
-/** post **/
-
-.post p {
-	margin: 0.5rem 0;
-}
-
-.post h1,
-.post h2,
-.post h3,
-.post h4 {
-	margin: 1rem 0;
-}
-
-.post .title {
-	padding-bottom: 0.2rem;
-	padding-right: 0rem;
-	width: fit-content;
-	border-bottom: 1.4px solid var(--title-bar-color);
-	font-weight: 800;
-	font-size: 2rem;
-}
-
-.post h2:first-child,
-.project h2:first-child,
-.photo h2:first-child {
+.project h2:first-child {
 	margin-top: 0;
 }
 
@@ -104,35 +81,6 @@ table {
 	}
 }
 
-/**  header **/
-header {
-	flex-basis: 10rem;
-	flex-grow: 1;
-	position: fixed;
-	height: 100%;
-	z-index: 997;
-}
-
-header a {
-	text-decoration: none;
-}
-
-header li {
-	margin-bottom: 0.2rem;
-	text-align: right;
-	margin-right: 2rem;
-}
-
-header a.active {
-	font-weight: bold;
-	color: var(--active-color);
-}
-
-header,
-section {
-	padding: 1rem;
-}
-
 blockquote {
 	font-style: italic;
 	border-left: 8px solid var(--blockquote-bar-color);
@@ -160,11 +108,6 @@ u {
 	font-weight: 600;
 }
 
-section.post h4,
-h5 {
-	margin: 0.6rem 0 !important;
-}
-
 section h1:first-child {
 	margin-top: 0;
 }
@@ -187,56 +130,8 @@ b {
 	margin-bottom: 0.5rem;
 }
 
-.posts ul,
-header ul,
-.category-list ul {
+header ul {
 	list-style: none;
-}
-
-.posts li.post-item,
-.category-list li.category-item {
-	margin-bottom: 2.7rem;
-}
-
-.posts li a,
-.category-list li a {
-	text-decoration: none;
-}
-
-.posts li p.post-title,
-.category-list li p.category-title {
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	font-size: 1.4rem;
-	font-weight: 700;
-	margin-bottom: 0.5rem;
-	transition: color 0.3s;
-
-	&:hover {
-		text-decoration: underline;
-		color: var(--title-hover-color);
-	}
-}
-
-.posts li .post-time,
-.category-list li .category-time {
-	& time {
-		font-style: italic;
-		white-space: nowrap;
-		font-size: 0.9rem;
-		font-weight: 600;
-		color: var(--time-color);
-	}
-}
-
-.category-list .category {
-	color: var(--active-color);
-}
-
-.post ul,
-.post ol {
-	list-style-position: inside;
 }
 
 main {
@@ -252,10 +147,7 @@ section {
 	min-width: 70%;
 	display: flex;
 	flex-direction: column;
-}
-
-section.post {
-	padding: 16px;
+	padding: 1rem;
 }
 
 @media screen and (max-width: 45rem) {
@@ -300,24 +192,6 @@ section.post {
 
 figcaption {
 	font-size: smaller;
-}
-
-/** category **/
-.categories ul {
-	list-style: none;
-}
-.categories li {
-	display: inline;
-	margin: 0 0.5rem 1.5rem 0.5rem;
-	text-decoration: underline;
-}
-
-.categories li a {
-	font-weight: 700;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	text-decoration: none;
 }
 
 /** pagination **/
