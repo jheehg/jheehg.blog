@@ -1,10 +1,11 @@
 export interface PostMeta {
+	layout: string;
 	title: string;
 	description?: string;
 	summary?: string;
-	tags?: string[];
-	layout: string;
 	comments?: boolean;
+	categories?: string[];
+	tags?: string[];
 }
 
 export interface Post {

@@ -29,7 +29,7 @@
 <style>
 	button#theme-toggle-button {
 		position: absolute;
-		right: 10px;
+		right: 25px;
 		cursor: pointer;
 		z-index: 1000;
 	}

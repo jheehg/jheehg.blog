@@ -25,8 +25,23 @@
 </script>
 
 {#if post}
-	<article>
-		<h1>{post.metadata.title}</h1>
+	<section class="post">
+		<h1 class="title text-2xl font-semibold">{post.metadata.title}</h1>
 		<svelte:component this={post.content} />
-	</article>
+	</section>
 {/if}
+
+<style>
+	section.post {
+		padding: 16px;
+	}
+
+	.post .title {
+		padding-bottom: 0.2rem;
+		padding-right: 0rem;
+		width: fit-content;
+		border-bottom: 1.4px solid var(--title-bar-color);
+		font-weight: 800;
+		font-size: 2rem;
+	}
+</style>
