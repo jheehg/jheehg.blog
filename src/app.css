@@ -1,3 +1,20 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+
+h1 {
+	@apply my-4 text-3xl font-bold;
+	line-height: 1;
+}
+h2 {
+	@apply my-3 text-2xl font-semibold;
+}
+h3 {
+	@apply my-1 text-xl font-semibold;
+}
+h4 {
+	@apply my-1 text-lg font-semibold;
+}
+h5 {
+	@apply my-0 text-base font-semibold;
+}

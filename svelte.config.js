@@ -4,7 +4,8 @@ import { escapeSvelte, mdsvex } from 'mdsvex';
 import { createHighlighter } from 'shiki';
 
 const highlighter = await createHighlighter({
-	themes: ['github-light', 'github-dark'],
+	// @refernce : https://textmate-grammars-themes.netlify.app/
+	themes: ['github-dark', 'github-light'],
 	langs: ['javascript', 'typescript', 'svelte', 'plain', 'html', 'tsx', 'yml', 'yaml'],
 	langAlias: {
 		js: 'javascript',
@@ -24,9 +25,15 @@ const config = {
 			// post: path.resolve('./src/lib/components/DefaultLayout.svelte')
 			// },
 			highlight: {
-				highlighter: (code, lang = 'plain') => {
-					const html = escapeSvelte(highlighter.codeToHtml(code, { lang, theme: 'github-light' }));
-					return `{@html \`${html}\` }`;
+				highlighter: (code, lang) => {
+					const langCd = lang || 'plain';
+					const html = escapeSvelte(
+						highlighter.codeToHtml(code, {
+							lang: langCd,
+							themes: { dark: 'github-dark', light: 'github-light' }
+						})
+					);
+					return `{@html \`<div class="highlight">${html}</div>\` }`;
 				}
 			}
 		})
