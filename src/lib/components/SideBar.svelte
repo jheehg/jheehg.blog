@@ -5,7 +5,7 @@
 	const currentPath = $derived(page.url.pathname);
 </script>
 
-<header>
+<header class="sidebar">
 	<nav>
 		<ul>
 			{#each navigationLinks as item}
@@ -23,7 +23,7 @@
 </header>
 
 <style>
-	header {
+	header.sidebar {
 		flex-basis: 10rem;
 		flex-grow: 1;
 		position: fixed;
@@ -32,35 +32,22 @@
 		padding: 1rem;
 	}
 
-	header a {
+	header.sidebar a {
 		text-decoration: none;
 	}
 
-	header li {
+	header.sidebar li {
 		margin-bottom: 0.2rem;
 		text-align: right;
 		margin-right: 2rem;
 	}
 
-	header a.active {
+	header.sidebar a.active {
 		font-weight: bold;
 		color: var(--active-color);
 	}
 
-	header ul {
+	header.sidebar ul {
 		list-style: none;
-	}
-
-	@media screen and (max-width: 45rem) {
-		header {
-			flex-basis: 0;
-			position: relative;
-			height: auto;
-		}
-
-		header li {
-			display: inline;
-			margin-right: 1rem;
-		}
 	}
 </style>

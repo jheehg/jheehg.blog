@@ -26,7 +26,7 @@
 
 {#if post}
 	<section class="post">
-		<h1 class="title text-2xl font-semibold">{post.metadata.title}</h1>
+		<h1 class="title">{post.metadata.title}</h1>
 		<svelte:component this={post.content} />
 	</section>
 {/if}
@@ -36,7 +36,9 @@
 		padding: 16px;
 	}
 
-	.post .title {
+	section.post h1.title {
+		margin-top: 0;
+		margin-bottom: 2.5rem;
 		padding-bottom: 0.2rem;
 		padding-right: 0rem;
 		width: fit-content;

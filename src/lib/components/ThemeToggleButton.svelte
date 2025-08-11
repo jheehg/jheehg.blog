@@ -37,10 +37,4 @@
 	button:focus-visible {
 		outline: 2px solid currentColor;
 	}
-
-	@media screen and (max-width: 45rem) {
-		button#theme-toggle-button {
-			right: 20px;
-		}
-	}
 </style>
